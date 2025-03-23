@@ -1,24 +1,59 @@
 
 import './App.css'
+import Todo from './Todo';
 
 function App() {
-
+  const time = 50;
   return (
     <>
   
       <h1>Vite + React</h1>
-      <Students></Students>
+      <Todo task="learn more then" isDone={true}  time={ time}></Todo>
+      <Todo task="revise  Js then"isDone={true}></Todo>
+      <Todo task="take shower then" isDone={true}  time="100"></Todo>
+{/*       <Students></Students>
       <Students></Students>
       <Person></Person>
       <Devolper name="redoayn"tec="pyhton"></Devolper>
       
       <Devolper name="alim"tec="java"></Devolper>
       
-      <Devolper name='mojumdaar'tec="react"></Devolper>
-      
+      <Devolper name='mojumdaar' tec="react"></Devolper>
+      <Players name="messi" goal="2000"></Players>
+      <Salami event="edul fitor" amount="5000"></Salami>
+      <Salami event="edul fitor" ></Salami>
+       */}
     </>
   )
 }
+function Salami({event,amount= 0}) {
+  return (
+    <div className='students'>
+      <p>salami for:{ event}</p>
+      <p>Amount: { amount}</p>
+
+
+    </div>
+
+  )
+}
+const {name,goal}={name:'alim',goal:'200'}
+function Players({name,run}) {
+
+  return (
+    <div className='students'>
+      <p>name: {name}</p>
+      <p>goal={ goal}</p>
+
+
+
+  </div>
+
+)
+
+}
+
+
 function Students() {
   const name = "alim"
   const depart="EEE"
